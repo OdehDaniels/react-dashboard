@@ -3,13 +3,13 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { Routes } from "../routes";
 
 // pages
-import Signin from "./frontend/Signin";
-import Signup from "./frontend/Signup";
-import ForgotPassword from "./frontend/ForgotPassword";
-import ResetPassword from "./frontend/ResetPassword";
-import Lock from "./frontend/Lock";
-import NotFoundPage from "./frontend/NotFound";
-import ServerError from "./frontend/ServerError";
+import Signin from "./usr/Signin";
+import Signup from "./usr/Signup";
+import ForgotPassword from "./usr/ForgotPassword";
+import ResetPassword from "./usr/ResetPassword";
+import Lock from "./usr/Lock";
+import NotFoundPage from "./usr/NotFound";
+import ServerError from "./usr/ServerError";
 
 const FrontEndRoute = ({ component: Component, ...rest }) => {
   return (

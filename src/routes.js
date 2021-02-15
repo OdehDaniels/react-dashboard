@@ -1,7 +1,7 @@
 
 export const Routes = {
     // pages
-    Signin: { path: "/usr/sign-in" },
+    Signin: { path: "/" },
     Signup: { path: "/usr/sign-up" },
     ForgotPassword: { path: "/usr/forgot-password" },
     ResetPassword: { path: "/usr/reset-password" },
