@@ -10,6 +10,10 @@ import ResetPassword from "./usr/ResetPassword";
 import Lock from "./usr/Lock";
 import NotFoundPage from "./usr/NotFound";
 import ServerError from "./usr/ServerError";
+// components
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const FrontEndRoute = ({ component: Component, ...rest }) => {
   return (
@@ -17,41 +21,34 @@ const FrontEndRoute = ({ component: Component, ...rest }) => {
   );
 };
 
-// const RouteWithSidebar = ({ component: Component, ...rest }) => {
-//   const [loaded, setLoaded] = useState(false);
+const RouteWithSidebar = ({ component: Component, ...rest }) => {
+  
+  // const localStorageIsSettingsVisible = () => {
+  //   return localStorage.getItem('settingsVisible') === 'false' ? false : true
+  // }
 
-//   useEffect(() => {
-//     const timer = setTimeout(() => setLoaded(true), 1000);
-//     return () => clearTimeout(timer);
-//   }, []);
+  // const [showSettings, setShowSettings] = useState(localStorageIsSettingsVisible);
 
-//   const localStorageIsSettingsVisible = () => {
-//     return localStorage.getItem('settingsVisible') === 'false' ? false : true
-//   }
+  // const toggleSettings = () => {
+  //   setShowSettings(!showSettings);
+  //   localStorage.setItem('settingsVisible', !showSettings);
+  // }
 
-//   const [showSettings, setShowSettings] = useState(localStorageIsSettingsVisible);
+  return (
+    <Route {...rest} render={props => (
+      <>
+        <Sidebar />
 
-//   const toggleSettings = () => {
-//     setShowSettings(!showSettings);
-//     localStorage.setItem('settingsVisible', !showSettings);
-//   }
-
-//   return (
-//     <Route {...rest} render={props => (
-//       <>
-//         <Preloader show={loaded ? false : true} />
-//         <Sidebar />
-
-//         <main className="content">
-//           <Navbar />
-//           <Component {...props} />
-//           <Footer toggleSettings={toggleSettings} showSettings={showSettings} />
-//         </main>
-//       </>
-//     )}
-//     />
-//   );
-// };
+        <main className="content">
+          <Navbar />
+          <Component {...props} />
+          <Footer />
+        </main>
+      </>
+    )}
+    />
+  );
+};
 
 export default () => (
   <Switch>
@@ -64,7 +61,7 @@ export default () => (
     <FrontEndRoute exact path={Routes.ServerError.path} component={ServerError} />
 
     {/* pages */}
-    
+    <RouteWithSidebar exact path={Routes.Index.path} component={DashboardOverview} />
     <Redirect to={Routes.NotFound.path} />
   </Switch>
 );
