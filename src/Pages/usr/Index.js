@@ -5,8 +5,8 @@ import { faCashRegister, faChartLine, faCloudUploadAlt, faPlus, faRocket, faTask
 import { Col, Row, Button, Dropdown, ButtonGroup } from '@themesberg/react-bootstrap';
 
 import { CounterWidget, CircleChartWidget, BarChartWidget, TeamMembersWidget, ProgressTrackWidget, RankingWidget, SalesValueWidget, SalesValueWidgetPhone, AcquisitionWidget } from "../../components/Widgets";
-import { PageVisitsTable } from "../../components/Tables";
-import { trafficShares, totalOrders } from "../../data/charts";
+// import { PageVisitsTable } from "../../components/Tables";
+// import { trafficShares, totalOrders } from "../../data/charts";
 
 export default () => {
   return (
@@ -79,9 +79,9 @@ export default () => {
         </Col>
 
         <Col xs={12} sm={6} xl={4} className="mb-4">
-          <CircleChartWidget
+          {/* <CircleChartWidget
             title="Traffic Share"
-            data={trafficShares} />
+            data={trafficShares} /> */}
         </Col>
       </Row>
 
@@ -91,7 +91,7 @@ export default () => {
             <Col xs={12} xl={8} className="mb-4">
               <Row>
                 <Col xs={12} className="mb-4">
-                  <PageVisitsTable />
+                  {/* <PageVisitsTable /> */}
                 </Col>
 
                 <Col xs={12} lg={6} className="mb-4">
@@ -107,11 +107,11 @@ export default () => {
             <Col xs={12} xl={4}>
               <Row>
                 <Col xs={12} className="mb-4">
-                  <BarChartWidget
+                  {/* <BarChartWidget
                     title="Total orders"
                     value={452}
                     percentage={18.2}
-                    data={totalOrders} />
+                    data={totalOrders} /> */}
                 </Col>
 
                 <Col xs={12} className="px-0 mb-4">

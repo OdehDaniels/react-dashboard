@@ -5,6 +5,7 @@ import { Routes } from "../routes";
 // pages
 import Signin from "./usr/Signin";
 import Signup from "./usr/Signup";
+import Index from "./usr/Index";
 import ForgotPassword from "./usr/ForgotPassword";
 import ResetPassword from "./usr/ResetPassword";
 import Lock from "./usr/Lock";
@@ -37,7 +38,7 @@ const RouteWithSidebar = ({ component: Component, ...rest }) => {
   return (
     <Route {...rest} render={props => (
       <>
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <main className="content">
           <Navbar />
@@ -61,7 +62,7 @@ export default () => (
     <FrontEndRoute exact path={Routes.ServerError.path} component={ServerError} />
 
     {/* pages */}
-    <RouteWithSidebar exact path={Routes.Index.path} component={DashboardOverview} />
+    <RouteWithSidebar exact path={Routes.Index.path} component={Index} />
     <Redirect to={Routes.NotFound.path} />
   </Switch>
 );
