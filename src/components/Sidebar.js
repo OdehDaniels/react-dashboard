@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
-import { faUserCircle, faBook, faBoxOpen, faChartPie, faCog, faFileAlt, faHandHoldingUsd, faSignOutAlt, faTable, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle, faMoneyBill, faBoxOpen, faReceipt, faWrench, faFileAlt, faWallet, faSignOutAlt, faTable, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Badge, Image, Button, Dropdown, Accordion, Navbar } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -99,11 +99,15 @@ export default (props = {}) => {
             <Nav className="flex-column pt-3 pt-md-0">
               <NavItem title="Dashboard" link={Routes.Index.path} image={ReactHero} />
               <NavItem title="Profile" link={Routes.Profile.path} icon={faUserCircle} />
-              <NavItem title="Settings" link={Routes.Settings.path} icon={faCog} />
-
-              <CollapsableNavItem eventKey="tables/" title="Tables" icon={faTable}>
-                <NavItem title="Bootstrap Table" />
+              <NavItem title="Wallet" icon={faWallet} link={Routes.Wallet.path} />
+              <NavItem title="Transactions" icon={faReceipt} link={Routes.Transactions.path} />
+              
+              <CollapsableNavItem eventKey="tables/" title="Order" icon={faMoneyBill}>
+                <NavItem title="Create" />
+                <NavItem title="Orders" />
               </CollapsableNavItem>
+
+              <NavItem title="Settings" link={Routes.Settings.path} icon={faWrench} />
 
               <CollapsableNavItem eventKey="examples/" title="FrontEnd" icon={faFileAlt}>
                 <NavItem title="Sign In" link={Routes.Signin.path} />
@@ -113,12 +117,6 @@ export default (props = {}) => {
                 <NavItem title="Lock" link={Routes.Lock.path} />
                 <NavItem title="404 Not Found" link={Routes.NotFound.path} />
                 <NavItem title="500 Server Error" link={Routes.ServerError.path} />
-              </CollapsableNavItem>
-              <Dropdown.Divider className="my-3 border-indigo" />
-              <CollapsableNavItem eventKey="components/" title="Components" icon={faBoxOpen}>
-                <NavItem title="Accordion" />
-                <NavItem title="Alerts" />
-                <NavItem title="Badges" />
               </CollapsableNavItem>
             </Nav>
           </div>

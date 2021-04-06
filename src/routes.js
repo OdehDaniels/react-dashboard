@@ -8,6 +8,8 @@ export const Routes = {
     Lock: { path: "/usr/lock" },
     Index: { path: "/" },
     Profile: { path: "/profile" },
+    Transactions: { path: "/transactions" },
+    Wallet: { path: "/wallet" },
     Settings: { path: "/settings" },
     NotFound: { path: "/usr/404" },
     ServerError: { path: "/usr/500" },    

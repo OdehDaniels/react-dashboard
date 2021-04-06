@@ -7,6 +7,8 @@ import Signin from "./usr/Signin";
 import Signup from "./usr/Signup";
 import Index from "./usr/Index";
 import Profile from "./usr/Profile";
+import Wallet from "./Wallet";
+import Transactions from "./Transactions";
 import Settings from "./Settings";
 import ForgotPassword from "./usr/ForgotPassword";
 import ResetPassword from "./usr/ResetPassword";
@@ -66,6 +68,8 @@ export default () => (
     {/* pages */}
     <RouteWithSidebar exact path={Routes.Index.path} component={Index} />
     <RouteWithSidebar exact path={Routes.Profile.path} component={Profile} />
+    <RouteWithSidebar exact path={Routes.Wallet.path} component={Wallet} />
+    <RouteWithSidebar exact path={Routes.Transactions.path} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings.path} component={Settings} />
     <Redirect to={Routes.NotFound.path} />
   </Switch>
