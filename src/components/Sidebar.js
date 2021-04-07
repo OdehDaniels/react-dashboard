@@ -103,8 +103,8 @@ export default (props = {}) => {
               <NavItem title="Transactions" icon={faReceipt} link={Routes.Transactions.path} />
               
               <CollapsableNavItem eventKey="tables/" title="Order" icon={faMoneyBill}>
-                <NavItem title="Create" />
-                <NavItem title="Orders" />
+                <NavItem title="Create" link={Routes.Orders.path} />
+                <NavItem title="Orders" link={Routes.CreateOrder.path} />
               </CollapsableNavItem>
 
               <NavItem title="Settings" link={Routes.Settings.path} icon={faWrench} />
