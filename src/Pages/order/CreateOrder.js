@@ -2,7 +2,7 @@ import React from "react";
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Col, Row, Breadcrumb } from '@themesberg/react-bootstrap';
-import { CreateOrderForm } from "../../components/OrderForm";
+import { CreateOrderForm } from "../../components/Forms";
 
 
 export default () => {
