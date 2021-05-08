@@ -9,6 +9,8 @@ export const Routes = {
     Index: { path: "/" },
     Profile: { path: "/profile" },
     Transactions: { path: "/transactions" },
+    Orders: { path: "/orders" },
+    CreateOrder: { path: "/order/create" },
     Wallet: { path: "/wallet" },
     Settings: { path: "/settings" },
     NotFound: { path: "/usr/404" },
